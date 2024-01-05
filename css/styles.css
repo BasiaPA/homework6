@@ -621,3 +621,124 @@ ul {
 .close-btn:focus .svg-close {
   fill: #ffffff;
 }
+
+.modal-title {
+  color: var(--dark-color);
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+  padding: 8px;
+  margin-top: 72px;
+  margin-bottom: 16px;
+}
+.form-position {
+  display: block;
+  justify-content: center;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+.label {
+  display: flex;
+  flex-direction: column;
+  color: var(--light-slate);
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.48px;
+  margin-bottom: 4px;
+  position: relative;
+}
+.icon {
+  position: absolute;
+  top: 24px;
+  left: 10px;
+}
+.icon-click {
+  fill: var(--white);
+  background-color: var(--primary-brand);
+  position: absolute;
+  left: -11px;
+  top: 1px;
+  border-radius: 2px;
+}
+.icon-checkmark {
+  position: relative;
+}
+.input {
+  width: 360px;
+  height: 40px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  border: 1px solid var(--light-slate);
+}
+.textarea {
+  width: 360px;
+  height: 120px;
+  border-radius: 4px;
+  border: 1px solid var(--light-slate);
+  margin-bottom: 16px;
+}
+.textarea::placeholder {
+  color: var(--light-slate);
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.48px;
+  padding-left: 16px;
+  padding-top: 8px;
+}
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.checkbox-label {
+  color: var(--light-slate);
+
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.48px;
+}
+.modal-link {
+  color: var(--primary-brand);
+
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.48px;
+  text-decoration-line: underline;
+}
+.submit-btn {
+  padding: 16px 32px;
+  margin: 0 auto;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  margin-left: 119px;
+  margin-right: 120px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: var(--white);
+  width: 169px;
+  height: 56px;
+  border: none;
+  border-radius: 4px;
+  background: var(--primary-brand);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.64px;
+}
