@@ -665,12 +665,21 @@ ul {
   fill: var(--white);
   background-color: var(--primary-brand);
   position: absolute;
-  left: -11px;
-  top: 1px;
+  left: -25px;
+  top: 0px;
+  width: 16px;
+  height: 16px;
   border-radius: 2px;
+  visibility: hidden;
 }
 .icon-checkmark {
   position: relative;
+}
+
+.box-check {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
 }
 .input {
   width: 100%;
