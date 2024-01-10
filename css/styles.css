@@ -829,3 +829,6 @@ ul {
   letter-spacing: 0.02em;
   margin-bottom: 16px;
 }
+.must {
+  gap: 24px;
+}
