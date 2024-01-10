@@ -579,6 +579,7 @@ ul {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   padding: 24px;
   padding-top: 72px;
 }
@@ -627,32 +628,28 @@ ul {
 .modal-title {
   color: var(--dark-color);
   text-align: center;
-  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.32px;
-
+  letter-spacing: 0.02em;
   margin-bottom: 16px;
 }
 .form-position {
-  display: block;
-  justify-content: center;
+  margin-bottom: 8px;
 }
 .label {
-  display: block;
-  flex-direction: column;
-  color: var(--light-slate);
-  font-family: "Roboto", sans-serif;
   font-size: 12px;
-  font-weight: 400;
-  line-height: 14px;
-  letter-spacing: 0.48px;
-  margin-bottom: 8px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--light-slate);
+  display: block;
+  margin-bottom: 4px;
 }
 .position-icon {
   position: relative;
-  margin-top: 4px;
+}
+.position-textarea {
+  margin-bottom: 16px;
 }
 .icon {
   position: absolute;
@@ -660,6 +657,7 @@ ul {
   left: 16px;
   transform: translateY(-50%);
   fill: var(--dark-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-click {
   fill: var(--white);
@@ -673,16 +671,18 @@ ul {
   visibility: hidden;
 }
 .icon-checkmark {
-  position: relative;
-  display: inline-block;
   width: 16px;
   height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
-  margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  display: inline-block;
   align-items: center;
   justify-content: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: transparent;
 }
 
 .box-check {
@@ -693,58 +693,53 @@ ul {
 .input {
   width: 100%;
   height: 40px;
-
+  border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  border: 1px solid var(--light-slate);
+  background-color: transparent;
+  padding-left: 38px;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.position-icon:hover .input,
-.position-icon:focus .input {
-  border: 1px solid var(--primary-brand);
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.input:focus,
+.input:hover {
+  border-color: var(--primary-brand);
 }
-.icon:hover,
-.icon:focus {
+
+.input:focus .icon,
+.input:hover .icon {
   fill: var(--primary-brand);
 }
-.position-icon:hover .icon,
-.position-icon:focus .icon {
-  fill: var(--primary-brand);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+
 .textarea {
-  width: 360px;
+  width: 100%;
   height: 120px;
-  border-radius: 4px;
-  border: 1px solid var(--light-slate);
-  margin-bottom: 16px;
-  margin-top: 4px;
-  resize: none;
-}
-.textarea::placeholder {
-  color: var(--light-slate);
-  font-family: "Roboto", sans-serif;
   font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  background-color: transparent;
+  padding: 8px 16px;
+  outline: transparent;
 
-  font-weight: 400;
-  line-height: 14px;
-  letter-spacing: 0.48px;
-  padding-left: 16px;
-  padding-top: 8px;
+  resize: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.textarea:focus,
+.textarea:hover {
+  border-color: var(--primary-brand);
+}
+
 .checkbox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-bottom: 24px;
 }
 .checkbox-label {
-  color: var(--light-slate);
-
-  font-family: "Roboto", sans-serif;
+  display: block;
   font-size: 12px;
-
-  font-weight: 400;
-  line-height: 14px;
-  letter-spacing: 0.48px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--light-slate);
 }
 .modal-link {
   color: var(--primary-brand);
@@ -758,27 +753,26 @@ ul {
   text-decoration-line: underline;
 }
 .submit-btn {
-  padding: 16px 32px;
-  margin: 0 auto;
-  margin-top: 24px;
-  margin-bottom: 24px;
-  margin-left: 119px;
-  margin-right: 120px;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  color: var(--white);
-  width: 169px;
+  display: block;
+  min-width: 169px;
   height: 56px;
-  border: none;
-  border-radius: 4px;
-  background: var(--primary-brand);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.64px;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  cursor: pointer;
+  background: var(--primary-brand);
+  border: none;
+  border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 0 auto;
+}
+.box-check:checked + .icon-checkmark {
+  background-color: var(--ocean);
+  fill: var(--light-color);
+  border: none;
 }
 .footer-btn {
   display: flex;
@@ -796,59 +790,39 @@ ul {
   background: var(--primary-brand);
   border-radius: 4px;
   border: none;
-
-  gap: 16px;
-  padding: 8px 24px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  fill: var(--white);
-  margin-left: 24px;
-  margin-top: 40px;
 }
 .footer-input {
   width: 264px;
   height: 40px;
-  flex-shrink: 0;
   border-radius: 4px;
   border: 1px solid var(--white);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   background-color: transparent;
-  margin-top: 16px;
-  display: block;
-  gap: 24px;
   font-size: 12px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   padding-left: 16px;
   color: var(--white);
 }
-.sub-class {
-  display: flex;
-  justify-content: baseline;
-  align-content: center;
-}
-.posit {
-  display: flex;
-}
-
-.footer-p {
-  color: var(--white);
-
-  font-size: 16px;
-
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-
-  margin-bottom: 16px;
-}
 .footer-input::placeholder {
   color: var(--white);
 }
-.box-check:checked + .checkbox-label span {
-  background-color: var(--ocean);
-  fill: var(--light-color);
-  border: none;
+.sub-class {
+  margin-left: 80px;
+}
+.posit {
+  display: flex;
+  gap: 24px;
 }
 .svg {
   margin-left: 16px;
+  fill: var(--white);
+}
+.footer-p {
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
 }
