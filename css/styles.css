@@ -703,12 +703,10 @@ ul {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-position input:focus,
-.form-position input:hover {
+.form-position input:focus {
   border-color: var(--primary-brand);
 }
-.form-position input:focus + svg,
-.form-position input:hover + svg {
+.form-position input:focus + svg {
   fill: var(--primary-brand);
 }
 .textarea {
@@ -770,6 +768,10 @@ ul {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin: 0 auto;
 }
+.submit-btn:hover {
+  background-color: var(--ocean);
+  cursor: pointer;
+}
 
 .box-check:checked + .checkbox-label span {
   fill: var(--light-color);
@@ -793,6 +795,11 @@ ul {
   background: var(--primary-brand);
   border-radius: 4px;
   border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-btn:hover {
+  background-color: var(--ocean);
+  cursor: pointer;
 }
 .footer-input {
   width: 264px;
